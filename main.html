@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Learning Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-button.active {
+            background-color: #6366f1; /* indigo-500 */
+            color: white;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .solution-hidden {
+            display: none;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        .shake-animation {
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-indigo-400">Python Learning Hub</h1>
+            <p class="text-gray-400 mt-2">Your interactive journey to mastering Python programming.</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+            <button onclick="showSection('sequence', this)" class="nav-button active px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition-all duration-300">Sequence</button>
+            <button onclick="showSection('selection', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition-all duration-300">Selection</button>
+            <button onclick="showSection('iteration', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition-all duration-300">Iteration</button>
+            <button onclick="showSection('data-structures', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition-all duration-300">Data Structures</button>
+            <button onclick="showSection('file-handling', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition-all duration-300">File Handling</button>
+            <button onclick="showSection('sub-programs', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-indigo-500 hover:text-white transition-all duration-300">Sub Programs</button>
+        </nav>
+
+        <main class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg">
+            <!-- Sequence Section -->
+            <div id="sequence" class="content-section active">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Sequence</h2>
+                <p class="mb-6">
+                    In programming, sequence refers to the execution of code statements one after another, in the order they are written. Python reads and runs your code from top to bottom, like reading a book. Each line is an instruction that is followed before moving to the next.
+                </p>
+                
+                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Total Money</h3>
+                    <p class="mb-4">Write a program that will:</p>
+                    <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
+                        <li>Assign the name <code class="bg-gray-600 text-red-400 px-1 rounded">"Fred"</code> (a string) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">name</code>.</li>
+                        <li>Assign the number <code class="bg-gray-600 text-red-400 px-1 rounded">15</code> (an integer) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">pounds</code>.</li>
+                        <li>Assign the number <code class="bg-gray-600 text-red-400 px-1 rounded">10</code> (an integer) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">pocket_money</code>.</li>
+                        <li>Add <code class="bg-gray-600 text-blue-400 px-1 rounded">pocket_money</code> to <code class="bg-gray-600 text-blue-400 px-1 rounded">pounds</code> and store the result.</li>
+                        <li>Output a message to the screen showing the total amount of money Fred has.</li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="font-semibold text-lg text-white">Expected Output:</h4>
+                        <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Fred has 25 pounds</code></pre>
+                    </div>
+
+                    <!-- Password Section -->
+                    <div id="password-wrapper-sequence" class="mt-6 border-t border-gray-600 pt-4">
+                        <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                        <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
+                        <div class="flex items-center gap-2">
+                            <input id="password-input-sequence" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
+                            <button onclick="checkPassword('sequence', 'tm')" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-all">Show</button>
+                        </div>
+                        <p id="error-message-sequence" class="text-red-400 text-sm mt-2 hidden">Incorrect password. Please try again.</p>
+                    </div>
+
+                    <!-- Solution -->
+                     <div id="solution-sequence" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
+                        <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                        <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"># Assign values to variables
+name = "Fred"
+pounds = 15
+pocket_money = 10
+
+# Calculate the total amount
+total_pounds = pounds + pocket_money
+
+# Print the final message
+# We use an f-string to easily combine text and variables
+print(f"{name} has {total_pounds} pounds")</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selection Section -->
+            <div id="selection" class="content-section">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Selection</h2>
+                <p class="mb-6">Selection is about making decisions. It allows a program to follow different paths based on whether a certain condition is true or false. In Python, this is primarily done using <code class="bg-gray-600 text-red-400 px-1 rounded">if</code>, <code class="bg-gray-600 text-red-400 px-1 rounded">elif</code>, and <code class="bg-gray-600 text-red-400 px-1 rounded">else</code> statements.</p>
+                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                    <p>A new challenge for the Selection section will be added here shortly!</p>
+                </div>
+            </div>
+            
+            <!-- Iteration Section -->
+            <div id="iteration" class="content-section">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Iteration</h2>
+                <p class="mb-6">Iteration means repeating a block of code multiple times. This is often called "looping". It's useful for when you want to perform the same action on a collection of items or repeat an action a specific number of times. Python uses <code class="bg-gray-600 text-red-400 px-1 rounded">for</code> and <code class="bg-gray-600 text-red-400 px-1 rounded">while</code> loops for iteration.</p>
+                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                    <p>A new challenge for the Iteration section will be added here shortly!</p>
+                </div>
+            </div>
+
+            <!-- Data Structures Section -->
+            <div id="data-structures" class="content-section">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Data Structures</h2>
+                <p class="mb-6">Data structures are ways of organizing and storing data. Python provides several built-in data structures, such as lists, tuples, dictionaries, and sets. Choosing the right one can make your code more efficient and easier to read.</p>
+                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                    <p>A new challenge for the Data Structures section will be added here shortly!</p>
+                </div>
+            </div>
+
+            <!-- File Handling Section -->
+            <div id="file-handling" class="content-section">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">File Handling</h2>
+                <p class="mb-6">File handling allows your program to read from and write to files on your computer. This is essential for tasks like saving program data, reading configuration settings, or processing large amounts of information stored in text files.</p>
+                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                    <p>A new challenge for the File Handling section will be added here shortly!</p>
+                </div>
+            </div>
+            
+            <!-- Sub Programs Section -->
+            <div id="sub-programs" class="content-section">
+                <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Sub Programs (Functions)</h2>
+                <p class="mb-6">Sub-programs, commonly known as functions in Python, are reusable blocks of code that perform a specific task. They help organize code, reduce repetition, and make your programs more modular and easier to maintain.</p>
+                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                    <p>A new challenge for the Sub Programs section will be added here shortly!</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function showSection(sectionId, clickedButton) {
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+            
+            // Update active state for navigation buttons
+            const buttons = document.querySelectorAll('.nav-button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            if (clickedButton) {
+                clickedButton.classList.add('active');
+            }
+        }
+
+        function checkPassword(challengeId, correctPassword) {
+            const passwordInput = document.getElementById(`password-input-${challengeId}`);
+            const errorMessage = document.getElementById(`error-message-${challengeId}`);
+            const passwordWrapper = document.getElementById(`password-wrapper-${challengeId}`);
+            const solutionDiv = document.getElementById(`solution-${challengeId}`);
+
+            if (passwordInput.value.toLowerCase() === correctPassword) {
+                // Correct password
+                if(passwordWrapper) passwordWrapper.style.display = 'none';
+                if(solutionDiv) solutionDiv.style.display = 'block';
+                if(errorMessage) errorMessage.classList.add('hidden');
+            } else {
+                // Incorrect password
+                if(errorMessage) errorMessage.classList.remove('hidden');
+                if(passwordInput) {
+                    passwordInput.classList.add('shake-animation');
+                    // Remove the class after the animation finishes to allow re-triggering
+                    setTimeout(() => {
+                        passwordInput.classList.remove('shake-animation');
+                    }, 500);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
