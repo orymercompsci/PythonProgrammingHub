@@ -29,6 +29,7 @@
         #data-structures-nav.active { background-color: #22c55e; /* green-500 */ }
         #file-handling-nav.active { background-color: #3b82f6; /* blue-500 */ }
         #sub-programs-nav.active { background-color: #8b5cf6; /* purple-500 */ }
+        #past-exam-questions-nav.active { background-color: #ec4899; /* pink-500 */ }
         
         /* Challenge Navigation Button Active Colors */
         .sequence-colors .challenge-nav-button.active { background-color: #dc2626; /* red-600 */ }
@@ -37,6 +38,7 @@
         .data-structures-colors .challenge-nav-button.active { background-color: #16a34a; /* green-600 */ }
         .file-handling-colors .challenge-nav-button.active { background-color: #2563eb; /* blue-600 */ }
         .sub-programs-colors .challenge-nav-button.active { background-color: #7c3aed; /* purple-600 */ }
+        .past-exam-questions-colors .challenge-nav-button.active { background-color: #db2777; /* pink-600 */ }
 
         .content-section {
             display: none;
@@ -124,6 +126,7 @@
             <button id="data-structures-nav" onclick="showSection('data-structures', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-green-500 hover:text-white transition-all duration-300">Data Structures</button>
             <button id="file-handling-nav" onclick="showSection('file-handling', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-blue-500 hover:text-white transition-all duration-300">File Handling</button>
             <button id="sub-programs-nav" onclick="showSection('sub-programs', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-purple-500 hover:text-white transition-all duration-300">Sub Programs</button>
+            <button id="past-exam-questions-nav" onclick="showSection('past-exam-questions', this)" class="nav-button px-4 py-2 font-semibold bg-gray-800 text-gray-300 rounded-lg shadow-md hover:bg-pink-500 hover:text-white transition-all duration-300">Past Exam Questions</button>
         </nav>
 
         <main class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg">
@@ -135,7 +138,7 @@
                 </p>
                 
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-red-400">Challenges</h3>
                     <div class="flex flex-col gap-3 sequence-colors">
                         <button onclick="showChallenge('challenge-sequence-1', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 1: Total Money</button>
                         <button onclick="showChallenge('challenge-sequence-2', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 2: Simple Sum</button>
@@ -156,7 +159,7 @@
 
                 <div id="challenge-sequence-1" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 1: Total Money</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 1: Total Money</h3>
                         <p class="mb-4">Write a program that will:</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                             <li>Assign the name <code class="bg-gray-600 text-red-400 px-1 rounded">"Fred"</code> (a string) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">name</code>.</li>
@@ -166,7 +169,7 @@
                             <li>Output a message to the screen showing the total amount of money Fred has.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                              <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -180,13 +183,13 @@
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Expected Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Expected Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Fred has 25 pounds</code></pre>
                         </div>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <p class="text-sm text-gray-400 mb-2">Use the following data to test your program and ensure it works correctly with different values.</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
@@ -220,7 +223,7 @@
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-1" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-1" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -231,7 +234,7 @@
     
                         <!-- Solution -->
                          <div id="solution-sequence-1" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Assign the string "Fred" to the variable 'name'</span>
 name = <span style="color: #22c55e;">"Fred"</span>
 
@@ -248,7 +251,7 @@ pounds = pounds + pocket_money
 <span style="color: #f472b6;"># The print function automatically adds spaces between items.</span>
 <span style="color: #a855f7;">print</span>(name, <span style="color: #22c55e;">"has"</span>, pounds, <span style="color: #22c55e;">"pounds"</span>)</code></pre>
 
-                            <h4 class="font-semibold text-lg text-white mt-4">Alternate Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400 mt-4">Alternate Solution:</h4>
                              <p class="text-sm text-gray-400 mb-2">This version is often preferred because it uses a new variable for the total, which can make the code easier to read and understand.</p>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Assign the string "Fred" to the variable 'name'</span>
 name = <span style="color: #22c55e;">"Fred"</span>
@@ -271,14 +274,14 @@ total = pounds + pocket_money
                 <!-- Challenge 2 -->
                 <div id="challenge-sequence-2" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 2: Simple Sum</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 2: Simple Sum</h3>
                         <p class="mb-4">Write a program that will create a randomised addition sum and print it to the screen.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Generate two random numbers between 1 and 100.</li>
                            <li>Output the sum on screen in the format shown below.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                              <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -296,13 +299,13 @@ total = pounds + pocket_money
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>23 + 34 = ?</code></pre>
                         </div>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <p class="text-sm text-gray-400 mb-2">Because this program uses random numbers, you don't need to test specific inputs. Just run the program multiple times and check that the output is always in the correct format.</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
@@ -336,7 +339,7 @@ total = pounds + pocket_money
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-2" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-2" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -347,7 +350,7 @@ total = pounds + pocket_money
     
                         <!-- Solution -->
                          <div id="solution-sequence-2" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Import the 'random' module, which contains functions for generating random numbers.</span>
 <span style="color: #a855f7;">import</span> random
 
@@ -367,7 +370,7 @@ num2 = random.randint(1, 100)
                 <!-- Challenge 3 -->
                 <div id="challenge-sequence-3" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 3: Car Journey</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 3: Car Journey</h3>
                         <p class="mb-4">Write a program that calculates the cost of a car journey.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Prompt the user to enter the distance of the trip (in miles).</li>
@@ -377,7 +380,7 @@ num2 = random.randint(1, 100)
                            <li>Display the results to the user in a clear, formatted message.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                              <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -399,7 +402,7 @@ num2 = random.randint(1, 100)
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the distance to be driven (miles): 100
 Enter the car's MPG: 50
 Enter the price per gallon (£): 1.50
@@ -410,7 +413,7 @@ Total cost of the trip: £3.00</code></pre>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <p class="text-sm text-gray-400 mb-2">Use the following data to test your program and ensure it handles different inputs correctly.</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
@@ -444,7 +447,7 @@ Total cost of the trip: £3.00</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-3" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-3" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -455,7 +458,7 @@ Total cost of the trip: £3.00</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-3" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># The input() function gets data from the user, but it always returns it as a string.</span>
 <span style="color: #f472b6;"># We use float() to convert the string input into a floating-point number (a number with a decimal place).</span>
 
@@ -487,7 +490,7 @@ total_cost = gallons_needed * fuel_price
                 <!-- Challenge 4 -->
                 <div id="challenge-sequence-4" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 4: Area of a shape</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 4: Area of a shape</h3>
                         <p class="mb-4">Write a program that will calculate the area of a rectangular shape.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Prompt the user to enter the height of the shape.</li>
@@ -496,7 +499,7 @@ total_cost = gallons_needed * fuel_price
                            <li>Display the calculated area to the user in a suitable message.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -514,7 +517,7 @@ total_cost = gallons_needed * fuel_price
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the height of the shape: 10
 Enter the width of the shape: 5
 The area of the shape is 50</code></pre>
@@ -522,7 +525,7 @@ The area of the shape is 50</code></pre>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <p class="text-sm text-gray-400 mb-2">Use the following data to test your program.</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
@@ -556,7 +559,7 @@ The area of the shape is 50</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-4" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-4" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -567,7 +570,7 @@ The area of the shape is 50</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-4" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># This task requires whole numbers, so we use int() to convert the user's string input to an integer.</span>
 
 <span style="color: #f472b6;"># Get the height from the user and convert it to an integer.</span>
@@ -589,7 +592,7 @@ area = height * width
                 <!-- Challenge 5 -->
                 <div id="challenge-sequence-5" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 5: Maths with three numbers</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 5: Maths with three numbers</h3>
                         <p class="mb-4">Write a program that will prompt a user for three integer number inputs and perform a calculation in stages.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Prompt the user for three separate integer inputs.</li>
@@ -598,7 +601,7 @@ area = height * width
                            <li>Each step of the calculation must be output to the user.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -616,7 +619,7 @@ area = height * width
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the first number: 10
 Enter the second number: 5
 Enter the third number: 3
@@ -627,7 +630,7 @@ The final answer is 45</code></pre>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <p class="text-sm text-gray-400 mb-2">Use the following data to test your program.</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
@@ -661,7 +664,7 @@ The final answer is 45</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-5" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-5" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -672,7 +675,7 @@ The final answer is 45</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-5" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Prompt for three integers, converting each input from a string to an integer.</span>
 num1 = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the first number: "</span>))
 num2 = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the second number: "</span>))
@@ -700,7 +703,7 @@ final_result = sum_result * num3
                 <!-- Challenge 6: Days to Minutes -->
                 <div id="challenge-sequence-6" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 6: Days to Minutes</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 6: Days to Minutes</h3>
                         <p class="mb-4">Write a program that will ask a user for a number of days they wish to convert into minutes.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Ask the user for a number of days.</li>
@@ -709,7 +712,7 @@ final_result = sum_result * num3
                            <li>Output the final answer in the format shown below.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -727,14 +730,14 @@ final_result = sum_result * num3
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the number of days: 2
 In 2 days, there are 2880 mins</code></pre>
                         </div>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
                                     <thead class="bg-gray-700">
@@ -767,7 +770,7 @@ In 2 days, there are 2880 mins</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-6" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-6" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -778,7 +781,7 @@ In 2 days, there are 2880 mins</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-6" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Ask the user for the number of days and convert the input string to an integer</span>
 days = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the number of days: "</span>))
 
@@ -798,7 +801,7 @@ minutes = hours * 60
                 <!-- Challenge 7: Piggy Bank -->
                 <div id="challenge-sequence-7" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 7: Piggy Bank</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 7: Piggy Bank</h3>
                         <p class="mb-4">Write a program that helps a user calculate the total value of the coins in their piggy bank.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Prompt the user for the number of each coin type (1p, 2p, 5p, 10p, 20p, 50p, £1, £2).</li>
@@ -806,7 +809,7 @@ minutes = hours * 60
                            <li>Display the total value to the screen, formatted to two decimal places.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -828,7 +831,7 @@ minutes = hours * 60
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>How many 1p coins: 10
 How many 2p coins: 5
 How many 5p coins: 2
@@ -842,7 +845,7 @@ Total value in your piggy bank: £6.80</code></pre>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
                                     <thead class="bg-gray-700">
@@ -875,7 +878,7 @@ Total value in your piggy bank: £6.80</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-7" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-7" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -886,7 +889,7 @@ Total value in your piggy bank: £6.80</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-7" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Get the count of each coin from the user</span>
 pennies = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"How many 1p coins: "</span>))
 two_pences = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"How many 2p coins: "</span>))
@@ -914,7 +917,7 @@ total_pounds = total_pence / 100
                 <!-- Challenge 8: Give me the Discount -->
                 <div id="challenge-sequence-8" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 8: Give me the Discount</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 8: Give me the Discount</h3>
                         <p class="mb-4">Write a program that simulates a discount being applied to a bought item.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>The user enters the full price of an item.</li>
@@ -924,7 +927,7 @@ total_pounds = total_pence / 100
                            <li>Output the discounted price of the item.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -946,7 +949,7 @@ total_pounds = total_pence / 100
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the full price of the item: 50.00
 Enter the discount percentage: 10
 The discounted price is: £45.00</code></pre>
@@ -954,7 +957,7 @@ The discounted price is: £45.00</code></pre>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
                                     <thead class="bg-gray-700">
@@ -987,7 +990,7 @@ The discounted price is: £45.00</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-8" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-8" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -998,7 +1001,7 @@ The discounted price is: £45.00</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-8" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Get the full price and discount percentage from the user</span>
 full_price = <span style="color: #a855f7;">float</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the full price of the item: "</span>))
 discount_percentage = <span style="color: #a855f7;">float</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the discount percentage: "</span>))
@@ -1019,7 +1022,7 @@ discounted_price = full_price - discount_amount
                 <!-- Challenge 9: Password Length Check -->
                 <div id="challenge-sequence-9" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 9: Password Length Check</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 9: Password Length Check</h3>
                         <p class="mb-4">Write a program that will check the length of a given password.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Ask the user to enter a password.</li>
@@ -1027,7 +1030,7 @@ discounted_price = full_price - discount_amount
                            <li>Output a message to the user telling them the length of their password.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -1045,14 +1048,14 @@ discounted_price = full_price - discount_amount
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter your password: mysecret
 Your password is 8 characters long.</code></pre>
                         </div>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
                                     <thead class="bg-gray-700">
@@ -1085,7 +1088,7 @@ Your password is 8 characters long.</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-9" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-9" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -1096,7 +1099,7 @@ Your password is 8 characters long.</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-9" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Ask the user to enter their password</span>
 password = <span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter your password: "</span>)
 
@@ -1113,7 +1116,7 @@ password_length = <span style="color: #a855f7;">len</span>(password)
                 <!-- Challenge 10: Create a Username -->
                 <div id="challenge-sequence-10" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 10: Create a Username</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 10: Create a Username</h3>
                         <p class="mb-4">Write a Python program that creates a username from user details.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Prompt the user to enter their first name.</li>
@@ -1123,7 +1126,7 @@ password_length = <span style="color: #a855f7;">len</span>(password)
                            <li>Print the generated username to the user.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -1141,7 +1144,7 @@ password_length = <span style="color: #a855f7;">len</span>(password)
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter your first name: John
 Enter your surname: Smith
 Enter your birth year: 1995
@@ -1150,7 +1153,7 @@ Your generated username is: 1995SmithJohn</code></pre>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
                                     <thead class="bg-gray-700">
@@ -1183,7 +1186,7 @@ Your generated username is: 1995SmithJohn</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-10" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-10" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -1194,7 +1197,7 @@ Your generated username is: 1995SmithJohn</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-10" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Get the user's details</span>
 first_name = <span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter your first name: "</span>)
 surname = <span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter your surname: "</span>)
@@ -1213,7 +1216,7 @@ username = birth_year + surname + first_name
                 <!-- Challenge 11: The Mystic Number -->
                 <div id="challenge-sequence-11" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 11: The Mystic Number</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 11: The Mystic Number</h3>
                         <p class="mb-4">Write a Python program that generates a secret number and asks the user to guess it.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Generate and store a random secret number between 1 and 10.</li>
@@ -1221,7 +1224,7 @@ username = birth_year + surname + first_name
                            <li>Reveal the secret number and the user's guess at the end.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -1247,14 +1250,14 @@ username = birth_year + surname + first_name
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Guess the mystic number (between 1 and 10): 7
 You guessed 7, the mystic number was 4.</code></pre>
                         </div>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <p class="text-sm text-gray-400 mb-2">Since the secret number is random, the output will vary. The goal is to ensure your program structure is correct.</p>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
@@ -1288,7 +1291,7 @@ You guessed 7, the mystic number was 4.</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-11" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-11" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -1299,7 +1302,7 @@ You guessed 7, the mystic number was 4.</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-11" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Import the random module to generate random numbers</span>
 <span style="color: #a855f7;">import</span> random
 
@@ -1319,7 +1322,7 @@ user_guess = <span style="color: #a855f7;">int</span>(<span style="color: #a855f
                 <!-- Challenge 12: Secret Agent ID -->
                 <div id="challenge-sequence-12" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 12: Secret Agent ID Number Generator</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 12: Secret Agent ID Number Generator</h3>
                         <p class="mb-4">Write a Python program that generates a three-part Agent ID from a secret number.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Ask the user to input their secret number.</li>
@@ -1332,7 +1335,7 @@ user_guess = <span style="color: #a855f7;">int</span>(<span style="color: #a855f
                         <strong>Part 3:</strong> The number of digits in the secret number.</p>
 
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -1366,14 +1369,14 @@ user_guess = <span style="color: #a855f7;">int</span>(<span style="color: #a855f
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter your secret number: 98172
 Your Secret Agent ID is: 19634-2-5</code></pre>
                         </div>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
                                     <thead class="bg-gray-700">
@@ -1406,7 +1409,7 @@ Your Secret Agent ID is: 19634-2-5</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-12" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-12" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -1417,7 +1420,7 @@ Your Secret Agent ID is: 19634-2-5</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-12" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Get the secret number as a string to easily find its length</span>
 secret_number_str = <span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter your secret number: "</span>)
 
@@ -1442,7 +1445,7 @@ part3 = num_digits
                 <!-- Challenge 13: Movie Code -->
                 <div id="challenge-sequence-13" class="challenge-content pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 13: Movie Code</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 13: Movie Code</h3>
                         <p class="mb-4">Write a program that will create a code for any movie when entered with its year of release.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Input a movie title and its year of release.</li>
@@ -1451,7 +1454,7 @@ part3 = num_digits
                            <li>Output the final movie code to the user.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -1469,7 +1472,7 @@ part3 = num_digits
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter movie title: The Matrix
 Enter year of release: 1999
 Movie code: The99</code></pre>
@@ -1477,7 +1480,7 @@ Movie code: The99</code></pre>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
                                     <thead class="bg-gray-700">
@@ -1510,7 +1513,7 @@ Movie code: The99</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-13" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-13" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -1521,7 +1524,7 @@ Movie code: The99</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-13" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Get the movie title and year from the user</span>
 movie_title = <span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter movie title: "</span>)
 release_year = <span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter year of release: "</span>)
@@ -1545,7 +1548,7 @@ movie_code = title_part + year_part
                 <!-- Challenge 14: Pig Latin Translator -->
                 <div id="challenge-sequence-14" class="challenge-content pt-2">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 14: Pig Latin Translator</h3>
+                        <h3 class="text-2xl font-semibold mb-4 text-red-400">Challenge 14: Pig Latin Translator</h3>
                         <p class="mb-4">Write a program that translates a single English word into Pig Latin.</p>
                         <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
                            <li>Input a word from the user.</li>
@@ -1555,7 +1558,7 @@ movie_code = title_part + year_part
                            <li>Output the translated word.</li>
                         </ul>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Key Commands Used:</h4>
                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
                              <div class="flex flex-wrap gap-4 mt-2">
                                 <div class="tooltip">
@@ -1573,14 +1576,14 @@ movie_code = title_part + year_part
                              </div>
                         </div>
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter a word to translate: Banana
 Translated to Pig Latin: anana-Bay</code></pre>
                         </div>
 
                         <!-- Testing Table -->
                         <div class="mt-6">
-                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Testing Table</h4>
                             <div class="overflow-x-auto">
                                 <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
                                     <thead class="bg-gray-700">
@@ -1613,7 +1616,7 @@ Translated to Pig Latin: anana-Bay</code></pre>
     
                         <!-- Password Section -->
                         <div id="password-wrapper-sequence-14" class="mt-6 border-t border-gray-600 pt-4">
-                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <h4 class="font-semibold text-lg text-red-400">View Solution</h4>
                             <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
                             <div class="flex items-center gap-2">
                                 <input id="password-input-sequence-14" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
@@ -1624,7 +1627,7 @@ Translated to Pig Latin: anana-Bay</code></pre>
     
                         <!-- Solution -->
                          <div id="solution-sequence-14" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <h4 class="font-semibold text-lg text-red-400">Example Solution:</h4>
                             <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Get the word from the user</span>
 original_word = <span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter a word to translate: "</span>)
 
@@ -1651,15 +1654,30 @@ pig_latin_word = rest_of_word + <span style="color: #22c55e;">"-"</span> + first
                 <h2 class="text-3xl font-bold mb-4 text-orange-400 border-b border-orange-600 pb-2">Selection</h2>
                 <p class="mb-6">Selection is about making decisions. It allows a program to follow different paths based on whether a certain condition is true or false. In Python, this is primarily done using <code class="bg-gray-600 text-red-400 px-1 rounded">if</code>, <code class="bg-gray-600 text-red-400 px-1 rounded">elif</code>, and <code class="bg-gray-600 text-red-400 px-1 rounded">else</code> statements.</p>
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-orange-400">Challenges</h3>
                     <div class="flex flex-col gap-3 selection-colors">
-                        <!-- Links to challenges will appear here -->
+                        <button onclick="showChallenge('challenge-selection-1', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 1: Largest of Three Numbers</button>
+                        <button onclick="showChallenge('challenge-selection-2', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 2: The Fortune Teller</button>
+                        <button onclick="showChallenge('challenge-selection-3', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 3: Ticket Pricing for a Theme Park</button>
+                        <button onclick="showChallenge('challenge-selection-4', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 4: Guessing the Number Game</button>
+                        <button onclick="showChallenge('challenge-selection-5', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 5: Calculating Change</button>
+                        <button onclick="showChallenge('challenge-selection-6', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 6: Bus Fare Calculator</button>
+                        <button onclick="showChallenge('challenge-selection-7', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 7: Purchase Total Discount</button>
+                        <button onclick="showChallenge('challenge-selection-8', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 8: Power Rating</button>
+                        <button onclick="showChallenge('challenge-selection-9', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 9: System Password</button>
+                        <button onclick="showChallenge('challenge-selection-10', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 10: The Weather</button>
+                        <button onclick="showChallenge('challenge-selection-11', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 11: Age Discount Price</button>
+                        <button onclick="showChallenge('challenge-selection-12', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 12: Magic Eight Ball</button>
+                        <button onclick="showChallenge('challenge-selection-13', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 13: Odd or Even Number</button>
+                        <button onclick="showChallenge('challenge-selection-14', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 14: Calculator</button>
+                        <button onclick="showChallenge('challenge-selection-15', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 15: Recipe</button>
+                        <button onclick="showChallenge('challenge-selection-16', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 16: Mobile Phone Tariff</button>
+                        <button onclick="showChallenge('challenge-selection-17', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 17: Ice Cream Shop</button>
                     </div>
                 </div>
-                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
-                    <p>A new challenge for the Selection section will be added here shortly!</p>
-                </div>
+                
+                <!-- All selection challenges are inserted here -->
+
             </div>
             
             <!-- Iteration Section -->
@@ -1667,15 +1685,23 @@ pig_latin_word = rest_of_word + <span style="color: #22c55e;">"-"</span> + first
                 <h2 class="text-3xl font-bold mb-4 text-yellow-400 border-b border-yellow-600 pb-2">Iteration</h2>
                 <p class="mb-6">Iteration means repeating a block of code multiple times. This is often called "looping". It's useful for when you want to perform the same action on a collection of items or repeat an action a specific number of times. Python uses <code class="bg-gray-600 text-red-400 px-1 rounded">for</code> and <code class="bg-gray-600 text-red-400 px-1 rounded">while</code> loops for iteration.</p>
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-yellow-400">Challenges</h3>
                     <div class="flex flex-col gap-3 iteration-colors">
-                        <!-- Links to challenges will appear here -->
+                        <button onclick="showChallenge('challenge-iteration-1', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 1: The Magic Penny</button>
+                        <button onclick="showChallenge('challenge-iteration-2', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 2: 99 Bottles of Pop</button>
+                        <button onclick="showChallenge('challenge-iteration-3', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 3: Countdown to Launch</button>
+                        <button onclick="showChallenge('challenge-iteration-4', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 4: Random Math Quiz</button>
+                        <button onclick="showChallenge('challenge-iteration-5', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 5: Times Tables</button>
+                        <button onclick="showChallenge('challenge-iteration-6', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 6: Pool Competition</button>
+                        <button onclick="showChallenge('challenge-iteration-7', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 7: Limit33</button>
+                        <button onclick="showChallenge('challenge-iteration-8', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 8: Average of 10 Students Marks</button>
+                        <button onclick="showChallenge('challenge-iteration-9', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 9: Reverse the Word</button>
+                        <button onclick="showChallenge('challenge-iteration-10', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 10: Binary / Decimal Converter</button>
+                        <button onclick="showChallenge('challenge-iteration-11', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 11: Food Vending Machine</button>
+                        <button onclick="showChallenge('challenge-iteration-12', this)" class="challenge-nav-button bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors text-left">Challenge 12: Hangman</button>
                     </div>
                 </div>
-                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
-                    <p>A new challenge for the Iteration section will be added here shortly!</p>
-                </div>
+                <!-- All iteration challenges inserted here -->
             </div>
 
             <!-- Data Structures Section -->
@@ -1683,13 +1709,13 @@ pig_latin_word = rest_of_word + <span style="color: #22c55e;">"-"</span> + first
                 <h2 class="text-3xl font-bold mb-4 text-green-400 border-b border-green-600 pb-2">Data Structures</h2>
                 <p class="mb-6">Data structures are ways of organizing and storing data. Python provides several built-in data structures, such as lists, tuples, dictionaries, and sets. Choosing the right one can make your code more efficient and easier to read.</p>
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-green-400">Challenges</h3>
                     <div class="flex flex-col gap-3 data-structures-colors">
                         <!-- Links to challenges will appear here -->
                     </div>
                 </div>
                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-400">Programming Challenges Coming Soon</h3>
                     <p>A new challenge for the Data Structures section will be added here shortly!</p>
                 </div>
             </div>
@@ -1699,13 +1725,13 @@ pig_latin_word = rest_of_word + <span style="color: #22c55e;">"-"</span> + first
                 <h2 class="text-3xl font-bold mb-4 text-blue-400 border-b border-blue-600 pb-2">File Handling</h2>
                 <p class="mb-6">File handling allows your program to read from and write to files on your computer. This is essential for tasks like saving program data, reading configuration settings, or processing large amounts of information stored in text files.</p>
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-400">Challenges</h3>
                     <div class="flex flex-col gap-3 file-handling-colors">
                         <!-- Links to challenges will appear here -->
                     </div>
                 </div>
                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-400">Programming Challenges Coming Soon</h3>
                     <p>A new challenge for the File Handling section will be added here shortly!</p>
                 </div>
             </div>
@@ -1715,14 +1741,30 @@ pig_latin_word = rest_of_word + <span style="color: #22c55e;">"-"</span> + first
                 <h2 class="text-3xl font-bold mb-4 text-purple-400 border-b border-purple-600 pb-2">Sub Programs (Functions)</h2>
                 <p class="mb-6">Sub-programs, commonly known as functions in Python, are reusable blocks of code that perform a specific task. They help organize code, reduce repetition, and make your programs more modular and easier to maintain.</p>
                 <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <h3 class="text-xl font-semibold mb-3 text-purple-400">Challenges</h3>
                     <div class="flex flex-col gap-3 sub-programs-colors">
                         <!-- Links to challenges will appear here -->
                     </div>
                 </div>
                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Programming Challenges Coming Soon</h3>
                     <p>A new challenge for the Sub Programs section will be added here shortly!</p>
+                </div>
+            </div>
+            
+            <!-- Past Exam Questions Section -->
+            <div id="past-exam-questions" class="content-section">
+                <h2 class="text-3xl font-bold mb-4 text-pink-400 border-b border-pink-600 pb-2">Past Exam Questions</h2>
+                <p class="mb-6">This section contains challenges based on real past exam questions to help you test your knowledge in an academic context. These problems often combine multiple concepts from the other sections.</p>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-pink-400">Challenges</h3>
+                    <div class="flex flex-col gap-3 past-exam-questions-colors">
+                        <!-- Links to challenges will appear here -->
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-pink-400">Programming Challenges Coming Soon</h3>
+                    <p>A new challenge for the Past Exam Questions section will be added here shortly!</p>
                 </div>
             </div>
 
@@ -1745,23 +1787,15 @@ pig_latin_word = rest_of_word + <span style="color: #22c55e;">"-"</span> + first
             document.getElementById(sectionId).classList.add('active');
             clickedButton.classList.add('active');
             
-            // By default, show the first challenge of the new section
+            // Hide all challenges in the newly activated section
             const activeSection = document.getElementById(sectionId);
-            const firstChallenge = activeSection.querySelector('.challenge-content');
-            const firstChallengeButton = activeSection.querySelector('.challenge-nav-button');
-            
-            // Hide all challenges in the section first
             activeSection.querySelectorAll('.challenge-content').forEach(c => c.classList.remove('active'));
             activeSection.querySelectorAll('.challenge-nav-button').forEach(b => b.classList.remove('active'));
-
-            if (firstChallenge && firstChallengeButton) {
-                firstChallenge.classList.add('active');
-                firstChallengeButton.classList.add('active');
-            }
         }
 
         function showChallenge(challengeId, clickedButton) {
             const activeSection = clickedButton.closest('.content-section');
+            if (!activeSection) return; // Guard clause
 
             // Hide all challenges in the current section
             activeSection.querySelectorAll('.challenge-content').forEach(c => {
@@ -1773,8 +1807,13 @@ pig_latin_word = rest_of_word + <span style="color: #22c55e;">"-"</span> + first
             });
 
             // Show the selected challenge
-            document.getElementById(challengeId).classList.add('active');
-            clickedButton.classList.add('active');
+            const challengeToShow = document.getElementById(challengeId);
+            if(challengeToShow){
+                 challengeToShow.classList.add('active');
+            }
+            if(clickedButton){
+                clickedButton.classList.add('active');
+            }
         }
 
 
@@ -1802,18 +1841,12 @@ pig_latin_word = rest_of_word + <span style="color: #22c55e;">"-"</span> + first
             }
         }
 
-        // Initialize the view by showing the first challenge in the default active section
+        // Initialize the view - this is now empty to prevent a challenge showing on load.
         document.addEventListener('DOMContentLoaded', () => {
-            const firstChallenge = document.querySelector('#sequence .challenge-content');
-            const firstButton = document.querySelector('#sequence .challenge-nav-button');
-            if(firstChallenge && firstButton) {
-                firstChallenge.classList.add('active');
-                firstButton.classList.add('active');
-            }
+             // Intentionally left blank.
         });
     </script>
 
 </body>
 </html>
-
 
