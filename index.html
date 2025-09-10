@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -30,6 +33,11 @@
         }
         .shake-animation {
             animation: shake 0.5s ease-in-out;
+        }
+        /* Added styles for text wrapping */
+        pre, code {
+            white-space: pre-wrap; /* Allows text to wrap */
+            word-break: break-word; /* Breaks long words to prevent overflow */
         }
     </style>
 </head>
@@ -59,56 +67,308 @@
                     In programming, sequence refers to the execution of code statements one after another, in the order they are written. Python reads and runs your code from top to bottom, like reading a book. Each line is an instruction that is followed before moving to the next.
                 </p>
                 
-                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Total Money</h3>
-                    <p class="mb-4">Write a program that will:</p>
-                    <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
-                        <li>Assign the name <code class="bg-gray-600 text-red-400 px-1 rounded">"Fred"</code> (a string) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">name</code>.</li>
-                        <li>Assign the number <code class="bg-gray-600 text-red-400 px-1 rounded">15</code> (an integer) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">pounds</code>.</li>
-                        <li>Assign the number <code class="bg-gray-600 text-red-400 px-1 rounded">10</code> (an integer) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">pocket_money</code>.</li>
-                        <li>Add <code class="bg-gray-600 text-blue-400 px-1 rounded">pocket_money</code> to <code class="bg-gray-600 text-blue-400 px-1 rounded">pounds</code> and store the result.</li>
-                        <li>Output a message to the screen showing the total amount of money Fred has.</li>
-                    </ul>
-                    <div class="mt-6">
-                        <h4 class="font-semibold text-lg text-white">Expected Output:</h4>
-                        <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Fred has 25 pounds</code></pre>
-                    </div>
-
-                    <!-- Password Section -->
-                    <div id="password-wrapper-sequence" class="mt-6 border-t border-gray-600 pt-4">
-                        <h4 class="font-semibold text-lg text-white">View Solution</h4>
-                        <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
-                        <div class="flex items-center gap-2">
-                            <input id="password-input-sequence" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
-                            <button onclick="checkPassword('sequence', 'tm')" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-all">Show</button>
-                        </div>
-                        <p id="error-message-sequence" class="text-red-400 text-sm mt-2 hidden">Incorrect password. Please try again.</p>
-                    </div>
-
-                    <!-- Solution -->
-                     <div id="solution-sequence" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
-                        <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
-                        <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"># Assign values to variables
-name = "Fred"
-pounds = 15
-pocket_money = 10
-
-# Calculate the total amount
-total_pounds = pounds + pocket_money
-
-# Print the final message
-# We use an f-string to easily combine text and variables
-print(f"{name} has {total_pounds} pounds")</code></pre>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#challenge-sequence-1" class="bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Challenge 1: Total Money</a>
+                        <a href="#challenge-sequence-2" class="bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Challenge 2: Simple Sum</a>
+                        <a href="#challenge-sequence-3" class="bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Challenge 3: Car Journey</a>
                     </div>
                 </div>
+
+                <div id="challenge-sequence-1" class="pt-2 mb-8">
+                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 1: Total Money</h3>
+                        <p class="mb-4">Write a program that will:</p>
+                        <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
+                            <li>Assign the name <code class="bg-gray-600 text-red-400 px-1 rounded">"Fred"</code> (a string) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">name</code>.</li>
+                            <li>Assign the number <code class="bg-gray-600 text-red-400 px-1 rounded">15</code> (an integer) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">pounds</code>.</li>
+                            <li>Assign the number <code class="bg-gray-600 text-red-400 px-1 rounded">10</code> (an integer) to a variable called <code class="bg-gray-600 text-blue-400 px-1 rounded">pocket_money</code>.</li>
+                            <li>Add <code class="bg-gray-600 text-blue-400 px-1 rounded">pocket_money</code> to <code class="bg-gray-600 text-blue-400 px-1 rounded">pounds</code> and store the result.</li>
+                            <li>Output a message to the screen showing the total amount of money Fred has.</li>
+                        </ul>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Expected Screen Output:</h4>
+                            <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Fred has 25 pounds</code></pre>
+                        </div>
+
+                        <!-- Testing Table -->
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <p class="text-sm text-gray-400 mb-2">Use the following data to test your program and ensure it works correctly with different values.</p>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
+                                    <thead class="bg-gray-700">
+                                        <tr>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Test</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Inputs</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Outputs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 1 (Valid)</td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">name = "Fred"</code><br><code class="bg-gray-600 text-white px-1 rounded">pounds = 15</code><br><code class="bg-gray-600 text-white px-1 rounded">pocket_money = 10</code></td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">Fred has 25 pounds</code></td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 2 (Valid)</td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">name = "Jane"</code><br><code class="bg-gray-600 text-white px-1 rounded">pounds = 50</code><br><code class="bg-gray-600 text-white px-1 rounded">pocket_money = 20</code></td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">Jane has 70 pounds</code></td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 3 (Boundary)</td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">name = "Bob"</code><br><code class="bg-gray-600 text-white px-1 rounded">pounds = 0</code><br><code class="bg-gray-600 text-white px-1 rounded">pocket_money = 5</code></td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">Bob has 5 pounds</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+    
+                        <!-- Password Section -->
+                        <div id="password-wrapper-sequence-1" class="mt-6 border-t border-gray-600 pt-4">
+                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
+                            <div class="flex items-center gap-2">
+                                <input id="password-input-sequence-1" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
+                                <button onclick="checkPassword('sequence-1', 'tm')" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-all">Show</button>
+                            </div>
+                            <p id="error-message-sequence-1" class="text-red-400 text-sm mt-2 hidden">Incorrect password. Please try again.</p>
+                        </div>
+    
+                        <!-- Solution -->
+                         <div id="solution-sequence-1" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
+                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Assign the string "Fred" to the variable 'name'</span>
+name = <span style="color: #22c55e;">"Fred"</span>
+
+<span style="color: #f472b6;"># Assign the integer 15 to the variable 'pounds'</span>
+pounds = 15
+
+<span style="color: #f472b6;"># Assign the integer 10 to the variable 'pocket_money'</span>
+pocket_money = 10
+
+<span style="color: #f472b6;"># Add the value of 'pocket_money' to 'pounds' and update 'pounds' with the new value (15 + 10 = 25)</span>
+pounds = pounds + pocket_money
+
+<span style="color: #f472b6;"># Print the final sentence, combining the variables and strings.</span>
+<span style="color: #f472b6;"># The print function automatically adds spaces between items.</span>
+<span style="color: #a855f7;">print</span>(name, <span style="color: #22c55e;">"has"</span>, pounds, <span style="color: #22c55e;">"pounds"</span>)</code></pre>
+
+                            <h4 class="font-semibold text-lg text-white mt-4">Alternate Solution:</h4>
+                             <p class="text-sm text-gray-400 mb-2">This version is often preferred because it uses a new variable for the total, which can make the code easier to read and understand.</p>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Assign the string "Fred" to the variable 'name'</span>
+name = <span style="color: #22c55e;">"Fred"</span>
+
+<span style="color: #f472b6;"># Assign the integer 15 to the variable 'pounds'</span>
+pounds = 15
+
+<span style="color: #f472b6;"># Assign the integer 10 to the variable 'pocket_money'</span>
+pocket_money = 10
+
+<span style="color: #f472b6;"># Create a new variable 'total' to store the sum of 'pounds' and 'pocket_money'</span>
+total = pounds + pocket_money
+
+<span style="color: #f472b6;"># Print the final sentence using the new 'total' variable</span>
+<span style="color: #a855f7;">print</span>(name, <span style="color: #22c55e;">"has"</span>, total, <span style="color: #22c55e;">"pounds"</span>)</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge 2 -->
+                <div id="challenge-sequence-2" class="pt-2 mb-8">
+                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 2: Simple Sum</h3>
+                        <p class="mb-4">Write a program that will create a randomised addition sum and print it to the screen.</p>
+                        <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
+                           <li>Generate two random numbers between 1 and 100.</li>
+                           <li>Output the sum on screen in the format shown below.</li>
+                        </ul>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <pre class="bg-black text-white p-4 rounded-md mt-2"><code>23 + 34 = ?</code></pre>
+                        </div>
+
+                        <!-- Testing Table -->
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <p class="text-sm text-gray-400 mb-2">Because this program uses random numbers, you don't need to test specific inputs. Just run the program multiple times and check that the output is always in the correct format.</p>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
+                                    <thead class="bg-gray-700">
+                                        <tr>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Test</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Inputs</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Outputs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 1 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">None (numbers are random)</td>
+                                            <td class="py-2 px-4 align-top">A sum in the format: <code class="bg-gray-600 text-white px-1 rounded">[num1] + [num2] = ?</code></td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 2 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">None (numbers are random)</td>
+                                            <td class="py-2 px-4 align-top">A sum in the format: <code class="bg-gray-600 text-white px-1 rounded">[num1] + [num2] = ?</code></td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 3 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">None (numbers are random)</td>
+                                            <td class="py-2 px-4 align-top">A sum in the format: <code class="bg-gray-600 text-white px-1 rounded">[num1] + [num2] = ?</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+    
+                        <!-- Password Section -->
+                        <div id="password-wrapper-sequence-2" class="mt-6 border-t border-gray-600 pt-4">
+                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
+                            <div class="flex items-center gap-2">
+                                <input id="password-input-sequence-2" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
+                                <button onclick="checkPassword('sequence-2', 'ss')" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-all">Show</button>
+                            </div>
+                            <p id="error-message-sequence-2" class="text-red-400 text-sm mt-2 hidden">Incorrect password. Please try again.</p>
+                        </div>
+    
+                        <!-- Solution -->
+                         <div id="solution-sequence-2" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
+                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Import the 'random' module, which contains functions for generating random numbers.</span>
+<span style="color: #a855f7;">import</span> random
+
+<span style="color: #f472b6;"># Generate a random integer between 1 and 100 (inclusive) and store it in num1.</span>
+num1 = random.randint(1, 100)
+
+<span style="color: #f472b6;"># Generate a second random integer and store it in num2.</span>
+num2 = random.randint(1, 100)
+
+<span style="color: #f472b6;"># Print the two numbers in the desired format.</span>
+<span style="color: #a855f7;">print</span>(num1, <span style="color: #22c55e;">"+"</span>, num2, <span style="color: #22c55e;">"= ?"</span>)
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Challenge 3 -->
+                <div id="challenge-sequence-3" class="pt-2">
+                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 3: Car Journey</h3>
+                        <p class="mb-4">Write a program that calculates the cost of a car journey.</p>
+                        <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
+                           <li>Prompt the user to enter the distance of the trip (in miles).</li>
+                           <li>Prompt the user for their car's miles per gallon (MPG).</li>
+                           <li>Prompt the user for the current price of one gallon of fuel.</li>
+                           <li>Calculate the number of gallons needed and the total cost of the trip.</li>
+                           <li>Display the results to the user in a clear, formatted message.</li>
+                        </ul>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the distance to be driven (miles): 100
+Enter the car's MPG: 50
+Enter the price per gallon (£): 1.50
+
+Gallons needed: 2.0
+Total cost of the trip: £3.00</code></pre>
+                        </div>
+
+                        <!-- Testing Table -->
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <p class="text-sm text-gray-400 mb-2">Use the following data to test your program and ensure it handles different inputs correctly.</p>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
+                                    <thead class="bg-gray-700">
+                                        <tr>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Test</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Inputs</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Expected Outputs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 1 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">Distance: 200<br>MPG: 40<br>Price: 1.60</td>
+                                            <td class="py-2 px-4 align-top">Gallons needed: 5.0<br>Total cost of the trip: £8.00</td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 2 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">Distance: 350.5<br>MPG: 55.2<br>Price: 1.49</td>
+                                            <td class="py-2 px-4 align-top">Gallons needed: 6.3496...<br>Total cost of the trip: £9.46</td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 3 (Boundary)</td>
+                                            <td class="py-2 px-4 align-top">Distance: 10<br>MPG: 60<br>Price: 1.75</td>
+                                            <td class="py-2 px-4 align-top">Gallons needed: 0.1666...<br>Total cost of the trip: £0.29</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+    
+                        <!-- Password Section -->
+                        <div id="password-wrapper-sequence-3" class="mt-6 border-t border-gray-600 pt-4">
+                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
+                            <div class="flex items-center gap-2">
+                                <input id="password-input-sequence-3" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
+                                <button onclick="checkPassword('sequence-3', 'cj')" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-all">Show</button>
+                            </div>
+                            <p id="error-message-sequence-3" class="text-red-400 text-sm mt-2 hidden">Incorrect password. Please try again.</p>
+                        </div>
+    
+                        <!-- Solution -->
+                         <div id="solution-sequence-3" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
+                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># The input() function gets data from the user, but it always returns it as a string.</span>
+<span style="color: #f472b6;"># We use float() to convert the string input into a floating-point number (a number with a decimal place).</span>
+
+<span style="color: #f472b6;"># Get the distance from the user and convert it to a float.</span>
+distance = <span style="color: #a855f7;">float</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the distance to be driven (miles): "</span>))
+
+<span style="color: #f472b6;"># Get the car's MPG from the user and convert it to a float.</span>
+mpg = <span style="color: #a855f7;">float</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the car's MPG: "</span>))
+
+<span style="color: #f472b6;"># Get the fuel price from the user and convert it to a float.</span>
+fuel_price = <span style="color: #a855f7;">float</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the price per gallon (£): "</span>))
+
+<span style="color: #f472b6;"># Calculate the number of gallons needed for the trip.</span>
+gallons_needed = distance / mpg
+
+<span style="color: #f472b6;"># Calculate the total cost of the fuel for the trip.</span>
+total_cost = gallons_needed * fuel_price
+
+<span style="color: #f472b6;"># Print the results. An f-string is used here to format the output.</span>
+<span style="color: #f472b6;"># {gallons_needed} is a placeholder that gets replaced by the value of the variable.</span>
+<span style="color: #f472b6;"># :.1f formats the gallons to 1 decimal place.</span>
+<span style="color: #f472b6;"># :.2f formats the cost to 2 decimal places, which is standard for currency.</span>
+<span style="color: #a855f7;">print</span>(<span style="color: #22c55e;">f"\nGallons needed: {gallons_needed:.1f}"</span>)
+<span style="color: #a855f7;">print</span>(<span style="color: #22c55e;">f"Total cost of the trip: £{total_cost:.2f}"</span>)
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Selection Section -->
             <div id="selection" class="content-section">
                 <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Selection</h2>
                 <p class="mb-6">Selection is about making decisions. It allows a program to follow different paths based on whether a certain condition is true or false. In Python, this is primarily done using <code class="bg-gray-600 text-red-400 px-1 rounded">if</code>, <code class="bg-gray-600 text-red-400 px-1 rounded">elif</code>, and <code class="bg-gray-600 text-red-400 px-1 rounded">else</code> statements.</p>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Links to challenges will appear here -->
+                    </div>
+                </div>
+
                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
                     <p>A new challenge for the Selection section will be added here shortly!</p>
                 </div>
             </div>
@@ -117,8 +377,16 @@ print(f"{name} has {total_pounds} pounds")</code></pre>
             <div id="iteration" class="content-section">
                 <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Iteration</h2>
                 <p class="mb-6">Iteration means repeating a block of code multiple times. This is often called "looping". It's useful for when you want to perform the same action on a collection of items or repeat an action a specific number of times. Python uses <code class="bg-gray-600 text-red-400 px-1 rounded">for</code> and <code class="bg-gray-600 text-red-400 px-1 rounded">while</code> loops for iteration.</p>
-                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Links to challenges will appear here -->
+                    </div>
+                </div>
+
+                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
                     <p>A new challenge for the Iteration section will be added here shortly!</p>
                 </div>
             </div>
@@ -127,8 +395,16 @@ print(f"{name} has {total_pounds} pounds")</code></pre>
             <div id="data-structures" class="content-section">
                 <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Data Structures</h2>
                 <p class="mb-6">Data structures are ways of organizing and storing data. Python provides several built-in data structures, such as lists, tuples, dictionaries, and sets. Choosing the right one can make your code more efficient and easier to read.</p>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Links to challenges will appear here -->
+                    </div>
+                </div>
+                
                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
                     <p>A new challenge for the Data Structures section will be added here shortly!</p>
                 </div>
             </div>
@@ -137,8 +413,16 @@ print(f"{name} has {total_pounds} pounds")</code></pre>
             <div id="file-handling" class="content-section">
                 <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">File Handling</h2>
                 <p class="mb-6">File handling allows your program to read from and write to files on your computer. This is essential for tasks like saving program data, reading configuration settings, or processing large amounts of information stored in text files.</p>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Links to challenges will appear here -->
+                    </div>
+                </div>
+
                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
                     <p>A new challenge for the File Handling section will be added here shortly!</p>
                 </div>
             </div>
@@ -147,8 +431,16 @@ print(f"{name} has {total_pounds} pounds")</code></pre>
             <div id="sub-programs" class="content-section">
                 <h2 class="text-3xl font-bold mb-4 text-indigo-400 border-b border-gray-600 pb-2">Sub Programs (Functions)</h2>
                 <p class="mb-6">Sub-programs, commonly known as functions in Python, are reusable blocks of code that perform a specific task. They help organize code, reduce repetition, and make your programs more modular and easier to maintain.</p>
-                 <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
-                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenge: Coming Soon</h3>
+                
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Challenges</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- Links to challenges will appear here -->
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">Programming Challenges Coming Soon</h3>
                     <p>A new challenge for the Sub Programs section will be added here shortly!</p>
                 </div>
             </div>
@@ -207,5 +499,4 @@ print(f"{name} has {total_pounds} pounds")</code></pre>
 
 </body>
 </html>
-
 
