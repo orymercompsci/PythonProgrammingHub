@@ -39,6 +39,45 @@
             white-space: pre-wrap; /* Allows text to wrap */
             word-break: break-word; /* Breaks long words to prevent overflow */
         }
+        /* Tooltip Styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 220px;
+            background-color: #4338ca; /* indigo-700 */
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -110px; /* Half of width */
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #4338ca transparent transparent transparent;
+        }
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-300">
@@ -73,6 +112,8 @@
                         <a href="#challenge-sequence-1" class="bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Challenge 1: Total Money</a>
                         <a href="#challenge-sequence-2" class="bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Challenge 2: Simple Sum</a>
                         <a href="#challenge-sequence-3" class="bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Challenge 3: Car Journey</a>
+                        <a href="#challenge-sequence-4" class="bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Challenge 4: Area of a shape</a>
+                        <a href="#challenge-sequence-5" class="bg-gray-600 hover:bg-gray-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Challenge 5: Maths with three numbers</a>
                     </div>
                 </div>
 
@@ -87,6 +128,20 @@
                             <li>Add <code class="bg-gray-600 text-blue-400 px-1 rounded">pocket_money</code> to <code class="bg-gray-600 text-blue-400 px-1 rounded">pounds</code> and store the result.</li>
                             <li>Output a message to the screen showing the total amount of money Fred has.</li>
                         </ul>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
+                             <div class="flex flex-wrap gap-4 mt-2">
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">=</code>
+                                    <span class="tooltip-text">Used to assign a value to a variable (e.g., name = "Fred").</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">print()</code>
+                                    <span class="tooltip-text">Used to output text and variables to the screen.</span>
+                                </div>
+                             </div>
+                        </div>
                         <div class="mt-6">
                             <h4 class="font-semibold text-lg text-white">Expected Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Fred has 25 pounds</code></pre>
@@ -186,6 +241,24 @@ total = pounds + pocket_money
                            <li>Output the sum on screen in the format shown below.</li>
                         </ul>
                         <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
+                             <div class="flex flex-wrap gap-4 mt-2">
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">import</code>
+                                    <span class="tooltip-text">Used to bring in external modules of code, like the 'random' module.</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">random.randint()</code>
+                                    <span class="tooltip-text">A function from the random module that generates a random integer between two specified numbers.</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">print()</code>
+                                    <span class="tooltip-text">Used to output text and variables to the screen.</span>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="mt-6">
                             <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>23 + 34 = ?</code></pre>
                         </div>
@@ -255,7 +328,7 @@ num2 = random.randint(1, 100)
                 </div>
                 
                 <!-- Challenge 3 -->
-                <div id="challenge-sequence-3" class="pt-2">
+                <div id="challenge-sequence-3" class="pt-2 mb-8">
                     <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
                         <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 3: Car Journey</h3>
                         <p class="mb-4">Write a program that calculates the cost of a car journey.</p>
@@ -266,6 +339,28 @@ num2 = random.randint(1, 100)
                            <li>Calculate the number of gallons needed and the total cost of the trip.</li>
                            <li>Display the results to the user in a clear, formatted message.</li>
                         </ul>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                             <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
+                             <div class="flex flex-wrap gap-4 mt-2">
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">input()</code>
+                                    <span class="tooltip-text">Prompts the user for input and reads a line of text from the keyboard.</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">float()</code>
+                                    <span class="tooltip-text">Converts a value into a floating-point number (a number with decimals).</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">".format()"</code>
+                                    <span class="tooltip-text">A method to format a string, often used to control the number of decimal places.</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">print()</code>
+                                    <span class="tooltip-text">Used to output text and variables to the screen.</span>
+                                </div>
+                             </div>
+                        </div>
                         <div class="mt-6">
                             <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
                             <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the distance to be driven (miles): 100
@@ -342,12 +437,222 @@ gallons_needed = distance / mpg
 <span style="color: #f472b6;"># Calculate the total cost of the fuel for the trip.</span>
 total_cost = gallons_needed * fuel_price
 
-<span style="color: #f472b6;"># Print the results. An f-string is used here to format the output.</span>
-<span style="color: #f472b6;"># {gallons_needed} is a placeholder that gets replaced by the value of the variable.</span>
-<span style="color: #f472b6;"># :.1f formats the gallons to 1 decimal place.</span>
-<span style="color: #f472b6;"># :.2f formats the cost to 2 decimal places, which is standard for currency.</span>
-<span style="color: #a855f7;">print</span>(<span style="color: #22c55e;">f"\nGallons needed: {gallons_needed:.1f}"</span>)
-<span style="color: #a855f7;">print</span>(<span style="color: #22c55e;">f"Total cost of the trip: £{total_cost:.2f}"</span>)
+<span style="color: #f472b6;"># Print the results. The .format() method is used here to get specific decimal places.</span>
+<span style="color: #f472b6;"># "{:.1f}".format(gallons_needed) formats the number to 1 decimal place.</span>
+<span style="color: #f472b6;"># "{:.2f}".format(total_cost) formats the number to 2 decimal places for currency.</span>
+<span style="color: #a855f7;">print</span>(<span style="color: #22c55e;">"\nGallons needed:"</span>, <span style="color: #22c55e;">"{:.1f}"</span>.<span style="color: #a855f7;">format</span>(gallons_needed))
+<span style="color: #a855f7;">print</span>(<span style="color: #22c55e;">"Total cost of the trip: £"</span>, <span style="color: #22c55e;">"{:.2f}"</span>.<span style="color: #a855f7;">format</span>(total_cost))
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Challenge 4 -->
+                <div id="challenge-sequence-4" class="pt-2 mb-8">
+                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 4: Area of a shape</h3>
+                        <p class="mb-4">Write a program that will calculate the area of a rectangular shape.</p>
+                        <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
+                           <li>Prompt the user to enter the height of the shape.</li>
+                           <li>Prompt the user to enter the width of the shape.</li>
+                           <li>Calculate the area (<code class="bg-gray-600 text-white px-1 rounded">area = height * width</code>).</li>
+                           <li>Display the calculated area to the user in a suitable message.</li>
+                        </ul>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
+                             <div class="flex flex-wrap gap-4 mt-2">
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">input()</code>
+                                    <span class="tooltip-text">Prompts the user for input and reads a line of text from the keyboard.</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">int()</code>
+                                    <span class="tooltip-text">Converts a value into a whole number (an integer).</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">print()</code>
+                                    <span class="tooltip-text">Used to output text and variables to the screen.</span>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the height of the shape: 10
+Enter the width of the shape: 5
+The area of the shape is 50</code></pre>
+                        </div>
+
+                        <!-- Testing Table -->
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <p class="text-sm text-gray-400 mb-2">Use the following data to test your program.</p>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
+                                    <thead class="bg-gray-700">
+                                        <tr>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Test</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Inputs</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Expected Outputs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 1 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">Height: 10<br>Width: 5</td>
+                                            <td class="py-2 px-4 align-top">The area of the shape is 50</td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 2 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">Height: 25<br>Width: 4</td>
+                                            <td class="py-2 px-4 align-top">The area of the shape is 100</td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 3 (Boundary)</td>
+                                            <td class="py-2 px-4 align-top">Height: 1<br>Width: 1</td>
+                                            <td class="py-2 px-4 align-top">The area of the shape is 1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+    
+                        <!-- Password Section -->
+                        <div id="password-wrapper-sequence-4" class="mt-6 border-t border-gray-600 pt-4">
+                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
+                            <div class="flex items-center gap-2">
+                                <input id="password-input-sequence-4" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
+                                <button onclick="checkPassword('sequence-4', 'aoas')" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-all">Show</button>
+                            </div>
+                            <p id="error-message-sequence-4" class="text-red-400 text-sm mt-2 hidden">Incorrect password. Please try again.</p>
+                        </div>
+    
+                        <!-- Solution -->
+                         <div id="solution-sequence-4" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
+                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># This task requires whole numbers, so we use int() to convert the user's string input to an integer.</span>
+
+<span style="color: #f472b6;"># Get the height from the user and convert it to an integer.</span>
+height = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the height of the shape: "</span>))
+
+<span style="color: #f472b6;"># Get the width from the user and convert it to an integer.</span>
+width = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the width of the shape: "</span>))
+
+<span style="color: #f472b6;"># Calculate the area by multiplying height by width.</span>
+area = height * width
+
+<span style="color: #f472b6;"># Print the final result to the screen.</span>
+<span style="color: #a855f7;">print</span>(<span style="color: #22c55e;">"The area of the shape is"</span>, area)
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenge 5 -->
+                <div id="challenge-sequence-5" class="pt-2">
+                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Challenge 5: Maths with three numbers</h3>
+                        <p class="mb-4">Write a program that will prompt a user for three integer number inputs and perform a calculation in stages.</p>
+                        <ul class="list-disc list-inside mb-4 space-y-2 pl-4">
+                           <li>Prompt the user for three separate integer inputs.</li>
+                           <li>Add the first two numbers together and store the result.</li>
+                           <li>Multiply the result of the addition by the third number.</li>
+                           <li>Each step of the calculation must be output to the user.</li>
+                        </ul>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Key Commands Used:</h4>
+                            <p class="text-sm text-gray-400">Hover over a command to see its description.</p>
+                             <div class="flex flex-wrap gap-4 mt-2">
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">input()</code>
+                                    <span class="tooltip-text">Prompts the user for input and reads a line of text from the keyboard.</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">int()</code>
+                                    <span class="tooltip-text">Converts a value into a whole number (an integer).</span>
+                                </div>
+                                <div class="tooltip">
+                                    <code class="bg-gray-600 text-white px-2 py-1 rounded">print()</code>
+                                    <span class="tooltip-text">Used to output text and variables to the screen.</span>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Example Screen Output:</h4>
+                            <pre class="bg-black text-white p-4 rounded-md mt-2"><code>Enter the first number: 10
+Enter the second number: 5
+Enter the third number: 3
+10 + 5 = 15
+15 * 3 = 45
+The final answer is 45</code></pre>
+                        </div>
+
+                        <!-- Testing Table -->
+                        <div class="mt-6">
+                            <h4 class="font-semibold text-lg text-white">Testing Table</h4>
+                            <p class="text-sm text-gray-400 mb-2">Use the following data to test your program.</p>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full bg-gray-800 border border-gray-600 rounded-lg">
+                                    <thead class="bg-gray-700">
+                                        <tr>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Test</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Inputs</th>
+                                            <th class="text-left py-2 px-4 border-b border-gray-600 font-semibold">Expected Outputs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 1 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">10, 5, 3</td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">10 + 5 = 15</code><br><code class="bg-gray-600 text-white px-1 rounded">15 * 3 = 45</code><br><code class="bg-gray-600 text-white px-1 rounded">The final answer is 45</code></td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 2 (Valid)</td>
+                                            <td class="py-2 px-4 align-top">2, 8, 10</td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">2 + 8 = 10</code><br><code class="bg-gray-600 text-white px-1 rounded">10 * 10 = 100</code><br><code class="bg-gray-600 text-white px-1 rounded">The final answer is 100</code></td>
+                                        </tr>
+                                        <tr class="border-t border-gray-600">
+                                            <td class="py-2 px-4 align-top">Test 3 (Boundary)</td>
+                                            <td class="py-2 px-4 align-top">7, 3, 0</td>
+                                            <td class="py-2 px-4 align-top"><code class="bg-gray-600 text-white px-1 rounded">7 + 3 = 10</code><br><code class="bg-gray-600 text-white px-1 rounded">10 * 0 = 0</code><br><code class="bg-gray-600 text-white px-1 rounded">The final answer is 0</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+    
+                        <!-- Password Section -->
+                        <div id="password-wrapper-sequence-5" class="mt-6 border-t border-gray-600 pt-4">
+                            <h4 class="font-semibold text-lg text-white">View Solution</h4>
+                            <p class="text-sm text-gray-400 mb-2">Enter the password to see the solution. Hint: the initials of the challenge title.</p>
+                            <div class="flex items-center gap-2">
+                                <input id="password-input-sequence-5" type="password" placeholder="Password" class="bg-gray-900 border border-gray-600 text-white rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 w-full max-w-xs">
+                                <button onclick="checkPassword('sequence-5', 'mwtn')" class="bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition-all">Show</button>
+                            </div>
+                            <p id="error-message-sequence-5" class="text-red-400 text-sm mt-2 hidden">Incorrect password. Please try again.</p>
+                        </div>
+    
+                        <!-- Solution -->
+                         <div id="solution-sequence-5" class="mt-6 border-t border-gray-600 pt-4 solution-hidden">
+                            <h4 class="font-semibold text-lg text-white">Example Solution:</h4>
+                            <pre class="bg-gray-900 text-white p-4 rounded-md mt-2"><code class="language-python"><span style="color: #f472b6;"># Prompt for three integers, converting each input from a string to an integer.</span>
+num1 = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the first number: "</span>))
+num2 = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the second number: "</span>))
+num3 = <span style="color: #a855f7;">int</span>(<span style="color: #a855f7;">input</span>(<span style="color: #22c55e;">"Enter the third number: "</span>))
+
+<span style="color: #f472b6;"># Calculate the sum of the first two numbers</span>
+sum_result = num1 + num2
+<span style="color: #f472b6;"># Print the addition step. Each item separated by a comma is printed with a space.</span>
+<span style="color: #a855f7;">print</span>(num1, <span style="color: #22c55e;">"+"</span>, num2, <span style="color: #22c55e;">"="</span>, sum_result)
+
+<span style="color: #f472b6;"># Multiply the sum by the third number</span>
+final_result = sum_result * num3
+<span style="color: #f472b6;"># Print the multiplication step.</span>
+<span style="color: #a855f7;">print</span>(sum_result, <span style="color: #22c55e;">"*"</span>, num3, <span style="color: #22c55e;">"="</span>, final_result)
+
+<span style="color: #f472b6;"># Print the final answer.</span>
+<span style="color: #a855f7;">print</span>(<span style="color: #22c55e;">"The final answer is"</span>, final_result)
 </code></pre>
                         </div>
                     </div>
